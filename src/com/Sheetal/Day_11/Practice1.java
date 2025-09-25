@@ -1,7 +1,7 @@
 package com.Sheetal.Day_11;
 import java.util.Arrays;
 import java.util.Scanner;
-public class Practice {
+public class Practice1 {
     public static void main(String[] args) {
 
 
@@ -17,13 +17,13 @@ public class Practice {
             System.out.println(arr[i]);
         }*/
 
-        Scanner sc = new Scanner(System.in);
+       /* Scanner sc = new Scanner(System.in);
         int n = sc. nextInt();
         int[] arr = new int[n];
         System.out.println("Enter the elements: ");
         for (int i=0;i<n;i++){
             arr[i] = sc.nextInt();
-        }
+        }*/
 
 // Insertion
        /* int pos = sc.nextInt();
@@ -100,6 +100,29 @@ public class Practice {
         System.out.println(Arrays.toString(rotated));
        */
 
-    
+// merge two sorted arrays into third
+        int[] arr1 = {1,3,5};
+        int[] arr2 = {2,4,6,7,10};
+        int n1 = arr1.length;
+        int n2 = arr2.length;
+
+        int[] merged = new int[n1 + n2];
+        int i=0, j=0, k=0;
+        while(i<n1 && j<n2){
+            if (arr1[i] < arr2[j]){
+                merged[k++] = arr1[i++];
+            }
+            else{
+                merged[k++] = arr2[j++];
+            }
+        }
+        while (i < n1) {
+            merged[k++] = arr1[i++];
+        }
+        while (j < n2) {
+            merged[k++] = arr2[j++];
+        }
+
+        System.out.println("Merged Array: " + Arrays.toString(merged));
     }
 }
