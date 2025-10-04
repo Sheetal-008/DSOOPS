@@ -2,7 +2,7 @@ package com.Sheetal.Day_11;
 import java.util.Arrays;
 import java.util.Scanner;
 public class Practice2 {
-    // multidimesional arrays
+    // multi-dimensional arrays
 
     public static void main(String[] args) {
        /*int [][] matrix = {
